@@ -14,4 +14,4 @@ def obtener_posts_api(url):
                 post['title'],
                 post['body'],
                 post['userId']])
-    print(tabla_posts) 
+    print(tabla_posts)
