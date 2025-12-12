@@ -1,8 +1,8 @@
 import sys
-# Importamos las funciones de negocio que ya tienes y las nuevas
+s
 from negocio.negocio_sistema import registrar_usuario_app, login_app
 from negocio.negocio_users import obtener_users_api, crear_user_api, modificar_user_api, eliminar_user_api
-# Asegúrate de importar también para POSTS si lo usas
+
 from negocio.negocio_posts import obtener_posts_api
 
 def mostrar_menu():
@@ -54,8 +54,8 @@ def main():
             if usuario_logueado:
                 print("\n--- CREAR EN API (POST) ---")
                 url = "https://jsonplaceholder.typicode.com/users"
-                # Tu función crear_user_api en negocio_users ya hace el input y request
-                crear_user_api(url)
+                
+                crear_user_api(url) # Se asume que crear_user_api maneja la creación de un nuevo usuario
             else:
                 print("! DEBE INICIAR SESIÓN PRIMERO !")
 

@@ -11,7 +11,7 @@ class Geo(Base):
     lng = Column(Float, nullable=False)
 
 
-class Address():
+class Address(Base):
     __tablename__ = 'addresses'
     id = Column(Integer, primary_key=True)
     street = Column(String(30), nullable=False)
@@ -21,7 +21,7 @@ class Address():
     geoId = Column(Integer, ForeignKey('geos.id'), nullable=False)
 
 
-class Company():
+class Company(Base):
     __tablename__ = 'companies'
     id = Column(Integer, primary_key=True)
     name = Column(String(30), nullable=False)
@@ -29,7 +29,7 @@ class Company():
     bs = Column(String(100), nullable=False)
 
 
-class User():
+class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
     name = Column(String(30), nullable=False)
@@ -41,7 +41,7 @@ class User():
     companyId = Column(Integer, ForeignKey('companies.id'), nullable=False)
 
 
-class Post():
+class Post(Base):
     __tablename__ = 'posts'
     id = Column(Integer, primary_key=True)
     title = Column(String(50), nullable=False)
@@ -49,7 +49,7 @@ class Post():
     userId = Column(Integer, ForeignKey('users.id'), nullable=False)
 
 
-class Usuario():
+class Usuario(Base):
     __tablename__ = 'usuarios'
     id = Column(Integer, primary_key=True)
     username = Column(String(15), nullable=False)
